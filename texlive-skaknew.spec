@@ -77,6 +77,7 @@ as MetaFont source by the skak bundle.
 %doc %{_texmfdistdir}/doc/fonts/skaknew/SkakNew.tex
 %doc %{_texmfdistdir}/doc/fonts/skaknew/fonttables.pdf
 %doc %{_texmfdistdir}/doc/fonts/skaknew/install.vtex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -87,3 +88,5 @@ as MetaFont source by the skak bundle.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
