@@ -78,3 +78,17 @@ as MetaFont source by the skak bundle.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090221-2
++ Revision: 756063
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090221-1
++ Revision: 719545
+- texlive-skaknew
+- texlive-skaknew
+- texlive-skaknew
+- texlive-skaknew
+
