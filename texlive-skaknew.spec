@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-skaknew
-Version:	20090221
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	The skak chess fonts redone in Adobe Type 1
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/chess/skaknew
