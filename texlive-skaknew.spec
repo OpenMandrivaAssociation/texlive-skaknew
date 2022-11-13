@@ -1,18 +1,12 @@
-# revision 20031
-# category Package
-# catalog-ctan /fonts/chess/skaknew
-# catalog-date 2009-02-21 22:13:29 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-skaknew
-Version:	20190228
+Version:	20031
 Release:	1
 Summary:	The skak chess fonts redone in Adobe Type 1
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/chess/skaknew
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ This package offers Adobe Type 1 versions of the fonts provided
 as MetaFont source by the skak bundle.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -71,24 +65,10 @@ as MetaFont source by the skak bundle.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090221-2
-+ Revision: 756063
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090221-1
-+ Revision: 719545
-- texlive-skaknew
-- texlive-skaknew
-- texlive-skaknew
-- texlive-skaknew
-
