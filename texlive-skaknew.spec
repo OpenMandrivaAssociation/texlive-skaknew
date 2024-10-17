@@ -3,7 +3,7 @@ Version:	20031
 Release:	2
 Summary:	The skak chess fonts redone in Adobe Type 1
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/chess/skaknew
+URL:		https://www.ctan.org/tex-archive/fonts/chess/skaknew
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.doc.r%{version}.tar.xz
