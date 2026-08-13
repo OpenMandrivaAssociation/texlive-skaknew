@@ -12,9 +12,17 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.r%{tl_re
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/skaknew.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This package offers Adobe Type 1 versions of the fonts provided as
 Metafont source by the skak bundle.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from skaknew:
+Map SkakNew.map
+TL_DROPIN_EOF
